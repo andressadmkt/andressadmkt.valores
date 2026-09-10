@@ -237,6 +237,55 @@ li {
   }
 }
 
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ff4a20 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background:
+      linear-gradient(112deg, #ff0068 0%, #ff3036 48%, #ff7a00 100%) !important;
+    background-attachment: scroll !important;
+  }
+
+  .page {
+    width: 297mm !important;
+    min-height: 210mm !important;
+    page-break-after: always;
+    break-after: page;
+    background:
+      linear-gradient(112deg, #ff0068 0%, #ff3036 48%, #ff7a00 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    overflow: hidden !important;
+  }
+
+  .page:last-of-type {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .page::before,
+  .page::after {
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
 </style>
 </head>
 
